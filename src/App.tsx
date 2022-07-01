@@ -1,16 +1,24 @@
 import { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
 import { MovieCard } from './components/MovieCard';
 
 import { SideBar } from './components/SideBar';
 // import { Content } from './components/Content';
+=======
+import { Button } from './components/Button';
+
+// import { SideBar } from './components/SideBar';
+import { Content } from './components/Content';
+>>>>>>> 5547db574a007ccb166e7738e65a0b5e3134793a
 
 import { api } from './services/api';
 
 import './styles/global.scss';
-
 import './styles/sidebar.scss';
 import './styles/content.scss';
+import { SideBar } from './components/SideBar';
+
 
 
 
@@ -21,19 +29,10 @@ interface GenreResponseProps {
   title: string;
 }
 
-interface MovieProps {
-  imdbID: string;
-  Title: string;
-  Poster: string;
-  Ratings: Array<{
-    Source: string;
-    Value: string;
-  }>;
-  Runtime: string;
-}
 
 export function App() {
 
+<<<<<<< HEAD
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
   const [movies, setMovies] = useState<MovieProps[]>([]);
@@ -87,6 +86,21 @@ export function App() {
 
       {/* CONTENT */}
       <Content />
+=======
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
+
+      <SideBar/>
+
+      
+      <Content
+        id={selectedGenreId} 
+        name={'action'} 
+        title={''}
+      />      
+>>>>>>> 5547db574a007ccb166e7738e65a0b5e3134793a
     </div>
+
   )
 }
