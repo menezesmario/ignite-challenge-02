@@ -5,6 +5,9 @@ interface IconProps {
   color: string;
 }
 
+
+// receive name and color as props
+// ex. in parent component > <Icon name={iconName} color={selected ? '#FAE800' : '#FBFBFB'} />
 export function Icon(props: IconProps) {
 
   switch (props.name) {
